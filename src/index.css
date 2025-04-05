@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+header {
+    @apply bg-blue-600 text-white py-4 shadow-md;
+    border-bottom: 3px solid #1e3a8a;
+}
 
 body {
     height: 100%;
@@ -14,28 +18,47 @@ body {
     @apply flex flex-col md:flex-row m-0 p-0 justify-center items-center gap-4;
 }
 
-.navigation ul li a{
-    @apply inline-block text-sm py-2 px-4 cursor-pointer;
+.navigation ul li a {
+    @apply inline-block text-sm py-2 px-4 cursor-pointer text-white hover:bg-blue-700 rounded transition-colors;
 }
-
 
 footer {
     @apply bg-black text-white text-center p-4;
 }
 
-.pokemonList{
-    @apply flex justify-between gap-4 flex-wrap p-4
+.pokemonList {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4;
 }
 
-.pokemonListItem{
-    @apply flex flex-row gap-2 min-w-60 border ;
-}
-.pokemonListItem div{
-    @apply flex flex-col p-2;
+.pokemonListItem {
+    @apply flex flex-col items-center p-4 rounded-lg cursor-pointer transition-all duration-300;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    border: 2px solid #d1d5db;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.pokemonListItem img{
-    @apply object-cover;
+.pokemonListItem:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+}
+
+.pokemonListItem div {
+    @apply flex flex-col items-center p-2 w-full;
+}
+
+.pokemonListItem img {
+    @apply w-24 h-24 object-contain mb-2;
+    image-rendering: pixelated;
+}
+
+.pokemonName {
+    @apply text-lg font-bold text-center capitalize mb-1;
+    color: #1e40af;
+}
+
+.pokemonType {
+    @apply inline-block px-2 py-1 rounded-full text-xs font-semibold mr-1 mb-1;
 }
 
 
