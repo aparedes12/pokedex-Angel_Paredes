@@ -1,5 +1,4 @@
 # pokedex-Angel_Paredes
-Pokédex personalizada para Portales Web II
 
 ## Descripción
 Proyecto de Pokédex para Portales Web II con diseño personalizado
